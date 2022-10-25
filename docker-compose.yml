@@ -6,9 +6,10 @@ services:
     restart: unless-stopped
     env_file: ./.env
     environment:
-      - MYSQL_USER=admin
-      - MYSQL_ROOT_PASSWORD=admin
-      - MYSQL_DATABASE=achat
+        - MYSQL_ROOT_PASSWORD:admin
+        - MYSQL_USER:admin
+        - MYSQL_PASSWORD:admin
+        - MYSQL_DATABASE:achat
     ports:
       - 3306:3306
     volumes:
